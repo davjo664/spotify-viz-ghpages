@@ -1,0 +1,85 @@
+.list-group#chart{
+  overflow-y: scroll;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.list-group#chart .list-group-item{
+  color: white;
+  padding: 1.6%;
+  border: 1px solid rgb(56, 56, 56);
+  background: rgba(0,0,0,0);
+  border-radius: 0px;
+}
+.list-group#chart .list-group-item:hover{
+  background: rgba(60,60,60,0.8) !important;
+  cursor: pointer;
+}
+
+.list-group#chart .list-group-item.disabled:hover{
+  cursor: default;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#chart-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px;
+  width: 38%;
+  overflow-y: scroll;
+  font-size: 0.8em;
+  background-color: rgba(0, 0, 0, 0.0);
+  transition: height 0.5s linear;
+}
+
+.chart-header{
+  height: 40px;
+  color: white;
+    background-image: linear-gradient(to bottom, #1DB954, rgba(0,100,0,0.4));
+  /*padding-left: 0.8%;
+  padding-right: 0.8%;*/
+  border-radius: 0px;
+}
+
+.chart-header:hover{
+  cursor: pointer;
+}
+
+.chart-header #chart-title{
+  font-size: 14px;
+  display: inline-block;
+  float: left;
+  line-height: 40px;
+  vertical-align: middle;
+  padding-left: 12px;
+}
+
+.chart-header #streams-text{
+  font-size: 14px;
+  display: inline-block;
+  float: right;
+  line-height: 40px;
+  vertical-align: middle;
+  padding-right: 12px;
+}
+
+.no-data-found {
+  height: 100%;
+  background: rgba(0,0,0,0);
+  padding-top: 15%;
+  text-align: center;
+  color: grey;
+  font-size: 24px;
+}
+
+.spotify-play-button{
+  height: 80px;
+  width: 100%;
+  margin-bottom: -5px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SpotifyViz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/chart.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/timeline.css">
+  </head>
+  <body>
+    <div id="chart-container">
+      <iframe class="spotify-play-button" id="play-button" src="" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <div class="chart-header" id="chart-header">
+        <p id="chart-title" data-value="Global">Weekly Top 100 - Global</p>
+        <p id="streams-text">Streams</p>
+      </div>
+      <div class="list-group" id="chart"></div>
+    </div>
+    <div id="timeline"></div>
+    <p id="timeline-text"></p>
+    <h3 id="hoverText"></h3>
+    <div id="info">
+      <!--<h3>Interactive Maps - WebGL Demo</h3>
+      <div id="msg">Mouseover a country...</div>
+      <div>Click to rotate the globe</div>-->
+      <h1>SpotifyViz</h1>
+      <!-- <input id="search" /> -->
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" id="search" autocomplete="off" class="form-control" placeholder="Search country" aria-label="Search country" aria-describedby="basic-addon1">
+      </div>
+      <ul id="results" class="list-group">
+      </ul>
+    </div>
+    <div id="loading">Loading...</div>
+    <div id="graph-container">
+      <div class="graph-header" id="graph-header">
+        <p id="graph-title">Audio Features</p>
+      </div>
+      <div id="graph-content"></div>
+      </div>
+    </div>
+    <script src="js/third-party/three.js"></script>
+    <script src="js/third-party/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="js/common/iso-countries.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="./dist/bundle.js"></script> <!-- Bundled version of main.js -->
+  </body>
+</html>

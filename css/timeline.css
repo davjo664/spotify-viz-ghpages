@@ -1,0 +1,116 @@
+.ui-slider {
+	position: absolute;
+	right: 1%;
+  top: 30px;
+  width: 26%;
+  background: linear-gradient(to bottom, rgba(200, 200, 200, 0.3), rgba(140,140,140,0.2));
+  border-radius: 4px;
+}
+.ui-slider:hover{
+  cursor: pointer;
+}
+.ui-slider .ui-slider-handle {
+  cursor: pointer;
+	position: absolute;
+	z-index: 2;
+	width: 8px;
+	height: 18px;
+	-ms-touch-action: none;
+	touch-action: none;
+  border-radius: 0;
+	border: none;
+}
+.ui-slider .ui-slider-range {
+  background-color: rgba(0, 255, 70, 0.77);
+	position: absolute;
+	z-index: 1;
+	font-size: .7em;
+	display: block;
+	border: 0;
+	background-position: 0 0;
+}
+
+/* support: IE8 - See #6727 */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+	filter: inherit;
+}
+
+.ui-slider-horizontal {
+	/*height: .8em;*/
+  height: 8px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -.3em;
+	margin-left: -.6em;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+
+.ui-slider-vertical {
+	width: .8em;
+	height: 100px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: -.3em;
+	margin-left: 0;
+	margin-bottom: -.6em;
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0;
+	width: 100%;
+}
+.ui-slider-vertical .ui-slider-range-min {
+	bottom: 0;
+}
+.ui-slider-vertical .ui-slider-range-max {
+	top: 0;
+}
+
+#timeline-text{
+	font-size: 14px;
+	color: white;
+	position: absolute;
+	top: 4px;
+	right: 10.7%;
+}
+
+.ui-widget.ui-widget-content{
+	border: none;
+	height: 6px;
+}
+
+.ui-slider-horizontal .ui-slider-handle{
+	width: 6px;
+	height: 18px;
+  top: -6px;
+  margin-left: -2px;
+	border: none;
+	border-radius: 2px;
+	outline: none;
+	background: linear-gradient(to bottom, rgba(29,185,84,0.88), rgba(0,100,0,0.88));
+}
+
+.ui-slider-horizontal .ui-slider-handle:hover{
+	background: linear-gradient(to bottom, rgba(29,185,84,1), rgba(0,100,0,1));
+}
+
+.ui-slider-handle.ui-corner-all.ui-state-default.ui-state-focus.ui-state-active{
+	background: linear-gradient(to bottom, rgba(29,185,84,1), rgba(0,100,0,1));
+}
+
+.ui-slider-horizontal:hover{
+	background: linear-gradient(to bottom, rgba(200, 200, 200, 0.35), rgba(140,140,140,0.25));
+}
+
+.ui-slider-horizontal:hover .ui-slider-handle{
+	background: linear-gradient(to bottom, rgba(29,185,84,1), rgba(0,100,0,1));
+}
