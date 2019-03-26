@@ -2,7 +2,7 @@
 const rootURL = 'https://spotify-wiz.herokuapp.com'; // Production
 var auth = {};
 var firstDate = new Date('2016-12-29');
-var lastDate = new Date('2019-03-07');
+var lastDate;
 var selectedDate;
 var chart = document.getElementById('chart');
 var chartTitle = document.getElementById('chart-title');
@@ -13,6 +13,15 @@ var chartIsVisible = false;
 var numberOfSongs = 100;
 
 window.onload = function(){
+  var d = new Date();
+  var currentDay = d.getDay(); // Sunday = 0, ..., Saturday = 6
+  if(currentDay == 6){
+    d.setDate(d.getDate() - 2);
+  }
+  else{
+    d.setDate(d.getDate() - (currentDay + 3));
+  }
+  lastDate = new Date(d);
   selectedDate = new Date(lastDate);
   getAccessToken();
   setupTimeline();
